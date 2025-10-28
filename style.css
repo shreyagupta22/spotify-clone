@@ -1,0 +1,450 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #222;
+
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 120px);
+    /* subtract bottom music bar height */
+    margin-top: 50px;
+    /* leaves space from top */
+}
+
+.sidebar {
+    background-color: #121212;
+    border-radius: 0.5rem;
+    width: 280px;
+    height: 100%;
+    padding: 5px 10px;
+}
+
+.main {
+    background-color: #181818;
+    flex: 1;
+    border-radius: 0.5rem;
+    margin: 10px;
+    margin-top: 0;
+    padding: 20px;
+    overflow: auto;
+    padding-top: 0;
+    /* scroll only inside main */
+    height: calc(100vh - 120px);
+    box-sizing: border-box;
+}
+
+
+
+.navbar .btn {
+    display: flex;
+}
+
+.navbar .side-menu-nav {
+    display: flex
+}
+
+.navbar .btn button {
+    background-color: #222222f3;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 1rem;
+    font-size: 0.6rem;
+    margin: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar .btn i {
+    border: none;
+}
+
+.navbar .btn button:hover {
+    background-color: #333;
+}
+
+.navbar .side-menu-nav button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 0.6rem;
+    padding: 8px 14px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar .side-menu-nav .btn_dis i {
+    font-size: 10px;
+}
+
+.navbar .side-menu-nav .btn_dis:hover {
+    background-color: #333;
+}
+
+.navbar .side-menu-nav button:first-child {
+    background: linear-gradient(90deg, #1db954, #1ed760);
+    color: #000;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 1.5rem;
+    font-size: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navbar .side-menu-nav button:first-child:hover {
+    filter: brightness(1.1);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib_option img {
+    height: 0.7rem;
+    width: 0.7rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    /* slightly off-screen */
+    transition: all 0.3s ease;
+    /* smooth animation */
+}
+
+.sidebar:hover .lib_option img {
+    opacity: 1;
+    /* fade in */
+    transform: translateX(0);
+    /* slide into place */
+}
+
+.lib_option a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.create button {
+    border-radius: 1.5rem;
+    border: none;
+    font-weight: 700;
+    background-color: #222222f3;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+
+}
+
+.create button i {
+    font-size: 0.7rem;
+}
+
+.create button:hover {
+    background-color: #333;
+}
+
+.box {
+    height: 5rem;
+    background-color: #222222f3;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0;
+    padding: 0.7rem 1rem;
+}
+
+.box-p1 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.box-p2 {
+    font-size: 0.5rem;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.badge {
+    font-weight: 700;
+    font-size: 0.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    padding: 0.25rem 1rem;
+    margin-top: 0.5rem;
+    height: 1.5rem;
+    width: fit-content;
+    /*just to make content andr hi ho*/
+}
+
+.card-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+background-color: transparent;
+    width: 130px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-cont :hover{
+        background-color: #232323;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    font-size: 0.6rem;
+    opacity: 0.8;
+}
+
+.main h2 {
+    font-size: 1rem;
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music {
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.player {
+    width: 50%;
+}
+
+
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 0.7rem;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    /*isse phle ki styling htane ke liye*/
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+   background-color: #4a4a4a;
+    border-radius: 100px;
+    height: 0.1rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: #1ed760;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+
+.album {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-right: 50px;
+}
+
+.album img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    /* Prevents image distortion */
+}
+
+
+.album .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 10px;
+    /* Take up available space */
+}
+
+.album .info .song {
+    font-size: 0.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+
+.album .info .singer {
+    font-size: 0.4rem;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+.album i {
+    opacity: 0.8;
+    font-size: 0.7rem;
+    cursor: pointer;
+    color: white;
+    /* or any color you want */
+}
+
+.album i:hover {
+    opacity: 1;
+}
+
+.controls {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap:8px;
+    margin-left: 50px;
+    padding:5px;
+
+}
+
+.controls i {
+    font-size: 0.7rem;    /* controls icon size */
+    opacity: 0.7;       /* softer look */
+    cursor: pointer;    /* hover pointer */
+    transition: all 0.2s ease;
+    gap:5px;
+}
+
+.controls i:hover {
+    opacity: 1;         /* highlight on hover */
+    transform: scale(1.1);
+     /* small hover animation */
+     color: #1ed760;
+    
+}
+
+.controls .bar{
+    width: 25%;
+    appearance: none;
+    /*isse phle ki styling htane ke liye*/
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.controls .bar::-webkit-slider-runnable-track{
+   
+    background-color: #4a4a4a;
+    border-radius: 100px;
+    height: 0.1rem;
+}
+
+.controls .bar::-webkit-slider-thumb{
+     appearance: none;
+    height: 0.3rem;
+    width: 0.3rem;
+    background-color: #1ed760;
+    border-radius: 50%;
+    margin-top: -2px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 22%;
+}
+
+.footer-section h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+
+.footer-section p:hover {
+  color: white;
+}
